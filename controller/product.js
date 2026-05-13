@@ -81,7 +81,6 @@ const deleteProducts = async (req, res) => {
       return res.status(404).json({ message: "Product not found" });
     }
 
-    // BUG FIX: forEach + splice o'rniga filter ishlatildi
     const filteredProducts = products.filter((pro) => pro.id !== id);
     write_file("products.json", filteredProducts);
 
