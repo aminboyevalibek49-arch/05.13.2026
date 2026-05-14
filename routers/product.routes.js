@@ -7,6 +7,7 @@ const {
   deleteProducts,
   getPhones,
   getCars,
+  getAllData,
 } = require("../controller/product");
 const checkAdmin = require("../middleware/check-Admin");
 
@@ -19,5 +20,6 @@ productRouter.put("/update_product/:id", checkAdmin, updateProduct);
 productRouter.delete("/delete_product/:id", checkAdmin, deleteProducts);
 productRouter.get("/phones", getPhones);
 productRouter.get("/cars", getCars);
+productRouter.get("/all", getAllData);
 
 module.exports = productRouter;
