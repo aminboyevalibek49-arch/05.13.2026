@@ -5,12 +5,11 @@ const {
   addProduct,
   updateProduct,
   deleteProducts,
+  getPhones,
+  getCars,
 } = require("../controller/product");
 const checkAdmin = require("../middleware/check-Admin");
-const { getPhones } = require("../controller/product");
-const { getPhones, getCars } = require("../controller/product");
 
-productRouter.get("/phones", getPhones);
 const productRouter = Router();
 
 productRouter.get("/get_all_products", getAllProducts);
