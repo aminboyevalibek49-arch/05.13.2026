@@ -90,10 +90,21 @@ const deleteProducts = async (req, res) => {
   }
 };
 
+// get_phones
+const getPhones = (req, res) => {
+  const phones = [
+    { name: "Samsung S10", xotira: "128GB", narx: "$300" },
+    { name: "Samsung S21 Ultra", xotira: "256GB", narx: "$700" },
+    { name: "Samsung S26 Ultra", xotira: "512GB", narx: "$1200" },
+  ];
+  res.status(200).json(phones);
+};
+
 module.exports = {
   getAllProducts,
   getOneProduct,
   addProduct,
   deleteProducts,
   updateProduct,
+  getPhones,
 };
