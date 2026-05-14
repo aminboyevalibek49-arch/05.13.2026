@@ -8,7 +8,9 @@ const {
 } = require("../controller/product");
 const checkAdmin = require("../middleware/check-Admin");
 const { getPhones } = require("../controller/product");
+const { getPhones, getCars } = require("../controller/product");
 
+productRouter.get("/phones", getPhones);
 const productRouter = Router();
 
 productRouter.get("/get_all_products", getAllProducts);
@@ -17,5 +19,6 @@ productRouter.post("/add_product", checkAdmin, addProduct);
 productRouter.put("/update_product/:id", checkAdmin, updateProduct);
 productRouter.delete("/delete_product/:id", checkAdmin, deleteProducts);
 productRouter.get("/phones", getPhones);
+productRouter.get("/cars", getCars);
 
 module.exports = productRouter;

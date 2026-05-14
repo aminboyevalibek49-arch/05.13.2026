@@ -100,6 +100,16 @@ const getPhones = (req, res) => {
   res.status(200).json(phones);
 };
 
+// get_cars
+const getCars = (req, res) => {
+  const cars = [
+    { name: "Mercedes G63 AMG", yil: 2024, narx: "$180,000" },
+    { name: "Mercedes S-Class S580", yil: 2023, narx: "$120,000" },
+    { name: "Mercedes EQS 580", yil: 2024, narx: "$105,000" },
+  ];
+  res.status(200).json(cars);
+};
+
 module.exports = {
   getAllProducts,
   getOneProduct,
@@ -107,4 +117,5 @@ module.exports = {
   deleteProducts,
   updateProduct,
   getPhones,
+  getCars,
 };
